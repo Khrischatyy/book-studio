@@ -17,8 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->dateTime('founding_date');
-            $table->string('country');
-            $table->string('city');
             $table->float('rating');
             $table->timestamps();
         });
