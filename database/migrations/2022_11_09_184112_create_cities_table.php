@@ -13,19 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('user_document', function (Blueprint $table) {
+        Schema::create('cities', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
 
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('country_id');
 
-            $table->foreign('user_id')->references('id')->on('users')
+            $table->foreign('country_id')->references('id')->on('countries')
                 ->onDelete('cascade');
-
-            $table->unsignedBigInteger('document_id');
-
-            $table->foreign('document_id')->references('id')->on('documents')
-                ->onDelete('cascade');
-            $table->timestamps();
         });
     }
 
@@ -36,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_document');
+        Schema::dropIfExists('cities');
     }
 };
