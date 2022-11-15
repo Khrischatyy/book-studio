@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\API\CityController;
+use App\Http\Controllers\API\CompanyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware(['auth:sanctum'])->group(function () {
+    //тут будут все защищенные санктумом роуты
 });
+
+Route::get('/cities', [CityController::class, 'getCities']);
+Route::get('/studios/{cityId}', [CompanyController::class, 'getCompaniesByCityId']);
+Route::get('/studio/{id}', [CompanyController::class, 'getCompanyById']);
+Route::get('/search/{letter}', [CompanyController::class, 'searchCompanyByLetter']);
+Route::get('/time/{studioId}', [CompanyController::class, 'getFreeTimes']);
