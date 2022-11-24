@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class CompanySeeder extends Seeder
+class CompanyCitySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,24 +15,34 @@ class CompanySeeder extends Seeder
      */
     public function run()
     {
-        DB::table('companies')
+
+        DB::table('company_city')
             ->updateOrInsert(
                 [
                     'id' => 1,
-                    'name' => 'Section',
-                    'founding_date' => 2020,
-                    'rating' => 9.7,
+                    'company_id' => 1,
+                    'city_id' => 1,
                 ],
             );
 
-        DB::table('companies')
+        DB::table('company_city')
             ->updateOrInsert(
                 [
                     'id' => 2,
-                    'name' => 'Studio near',
-                    'founding_date' => 2020,
-                    'rating' => 9.7,
+                    'company_id' => 1,
+                    'city_id' => 2,
                 ],
             );
+
+        DB::table('company_city')
+            ->updateOrInsert(
+                [
+                    'id' => 3,
+                    'company_id' => 2,
+                    'city_id' => 3,
+                ],
+            );
+
+
     }
 }

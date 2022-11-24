@@ -13,11 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('companies', function (Blueprint $table) {
-            $table->unsignedBigInteger('city_id')->after('rating');
+        Schema::create('company_city', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('company_id');
+            $table->unsignedBigInteger('city_id');
+
+            $table->foreign('company_id')->references('id')->on('companies')
+                ->onDelete('cascade');
 
             $table->foreign('city_id')->references('id')->on('cities')
                 ->onDelete('cascade');
+
         });
     }
 
@@ -28,9 +34,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('companies', function (Blueprint $table) {
-            $table->dropForeign('companies_city_id_foreign');
-            $table->dropColumn('city_id');
-        });
+
+        Schema::dropIfExists('company_city');
     }
 };

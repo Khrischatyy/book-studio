@@ -32,5 +32,15 @@ class CitySeeder extends Seeder
                     'country_id' => 2,
                 ],
             );
+
+
+        DB::table('cities')
+            ->updateOrInsert(
+                [
+                    'id' => 3,
+                    'name' => 'Novi Sad',
+                    'country_id' => 1,
+                ],
+            );
     }
 }

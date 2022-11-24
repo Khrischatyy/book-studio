@@ -9,8 +9,13 @@ class Company extends Model
 {
     use HasFactory;
 
-    public function booking()
+    public function booking(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(Booking::class);
+    }
+
+    public function places(): \Illuminate\Database\Eloquent\Relations\HasManyThrough
+    {
+        return $this->hasManyThrough(Place::class, CompanyPlace::class);
     }
 }

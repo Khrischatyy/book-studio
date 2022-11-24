@@ -18,6 +18,10 @@ class DatabaseSeeder extends Seeder
             CountrySeeder::class,
             CitySeeder::class,
             CompanySeeder::class,
+            UserSeeder::class,
+            BookingSeeder::class,
+            PlaceSeeder::class,
+            CompanyCitySeeder::class
         ]);
 
         // \App\Models\User::factory(10)->create();
