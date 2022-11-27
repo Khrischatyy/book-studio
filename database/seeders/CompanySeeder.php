@@ -34,5 +34,26 @@ class CompanySeeder extends Seeder
                     'rating' => 9.7,
                 ],
             );
+
+        DB::table('companies')
+            ->updateOrInsert(
+                [
+                    'id' => 3,
+                    'name' => 'Shit company',
+                    'founding_date' => 2020,
+                    'rating' => 5.7,
+                ],
+            );
+
+
+        DB::table('companies')
+            ->updateOrInsert(
+                [
+                    'id' => 4,
+                    'name' => 'Good company',
+                    'founding_date' => 2020,
+                    'rating' => 8.7,
+                ],
+            );
     }
 }

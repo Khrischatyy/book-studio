@@ -16,6 +16,6 @@ class Company extends Model
 
     public function places(): \Illuminate\Database\Eloquent\Relations\HasManyThrough
     {
-        return $this->hasManyThrough(Place::class, CompanyPlace::class);
+        return $this->hasManyThrough(Place::class, CompanyCity::class);
     }
 }

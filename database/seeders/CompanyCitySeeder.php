@@ -38,8 +38,17 @@ class CompanyCitySeeder extends Seeder
             ->updateOrInsert(
                 [
                     'id' => 3,
-                    'company_id' => 2,
-                    'city_id' => 3,
+                    'company_id' => 3,
+                    'city_id' => 1,
+                ],
+            );
+
+        DB::table('company_city')
+            ->updateOrInsert(
+                [
+                    'id' => 4,
+                    'company_id' => 4,
+                    'city_id' => 1,
                 ],
             );
 

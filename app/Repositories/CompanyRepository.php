@@ -3,16 +3,13 @@
 namespace App\Repositories;
 
 use App\Models\Company;
+use App\Models\CompanyCity;
 use App\Repositories\Interfaces\CompanyRepositoryInterface;
 
 class CompanyRepository implements CompanyRepositoryInterface
 {
-    public function getByCityId($cityId)
+    public function getCompaniesByCityId(int $cityId)
     {
-        return Company::where('city_id', $cityId)->get();
-    }
-    public function getById($companyId)
-    {
-        return Company::where('id', $companyId)->first();
+        return CompanyCity::where('city_id', $cityId)->with('company')->get();
     }
 }

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\CityController;
 use App\Http\Controllers\API\CompanyController;
+use App\Http\Controllers\API\CountryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,16 +20,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
     //тут будут все защищенные санктумом роуты
 });
 
-Route::get('/countries', [CompanyController::class, 'getCountries']);
-Route::get('/cities/{countryId}', [CompanyController::class, 'getCitiesAndStudiosByCountryId']);
-
-
-
-
-
-
-Route::get('/cities', [CityController::class, 'getCities']);
-Route::get('/studios/{cityId}', [CompanyController::class, 'getCompaniesByCityId']);
-Route::get('/studio/{id}', [CompanyController::class, 'getCompanyById']);
-Route::get('/search/{letter}', [CompanyController::class, 'searchCompanyByLetter']);
-Route::get('/time/{studioId}', [CompanyController::class, 'getFreeTimes']);
+Route::get('/countries', [CountryController::class, 'getCountries']);
+Route::get('/cities/{countryId}', [CityController::class, 'getCitiesByCountryId']);
+Route::get('/companies/{cityId}', [CompanyController::class, 'getCompaniesByCityId']);
