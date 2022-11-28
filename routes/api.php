@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware(['auth:sanctum'])->group(function () {
-    //тут будут все защищенные санктумом роуты
+
 });
 
 Route::get('/countries', [CountryController::class, 'getCountries']);

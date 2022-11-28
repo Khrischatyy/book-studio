@@ -37,16 +37,5 @@ class BookingSeeder extends Seeder
                     'user_id' => 2,
                 ],
             );
-
-//        DB::table('bookings')
-//            ->updateOrInsert(
-//                [
-//                    'id' => 3,
-//                    'from' => Carbon::createFromTime(19),
-//                    'to' => Carbon::createFromTime(18),
-//                    'company_id' => 2,
-//                    'user_id' => 2,
-//                ],
-//            );
     }
 }
