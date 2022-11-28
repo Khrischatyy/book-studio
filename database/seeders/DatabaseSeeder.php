@@ -21,7 +21,9 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             BookingSeeder::class,
             PlaceSeeder::class,
-            CompanyCitySeeder::class
+            CompanyCitySeeder::class,
+            BadgeSeeder::class,
+            CompanyBadgeSeeder::class
         ]);
 
         // \App\Models\User::factory(10)->create();

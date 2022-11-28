@@ -14,4 +14,9 @@ class CompanyCity extends Model
     {
         return $this->hasOne(Company::class, 'id', 'company_id');
     }
+
+    public function badges(): \Illuminate\Database\Eloquent\Relations\HasOne
+    {
+        return $this->hasOne(CompanyBadge::class, 'company_id', 'company_id');
+    }
 }

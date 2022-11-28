@@ -9,6 +9,6 @@ class CompanyRepository implements CompanyRepositoryInterface
 {
     public function getCompaniesByCityId(int $cityId)
     {
-        return CompanyCity::where('city_id', $cityId)->with('company')->get();
+        return CompanyCity::where('city_id', $cityId)->with(['company', 'badges'])->get();
     }
 }
