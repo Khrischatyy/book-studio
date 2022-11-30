@@ -9,7 +9,7 @@ class Company extends Model
 {
     use HasFactory;
 
-    public function badges()
+    public function badges(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
         return $this->belongsToMany(Badge::class, 'company_badge');
     }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\AddressController;
 use App\Http\Controllers\API\CityController;
 use App\Http\Controllers\API\CompanyController;
 use App\Http\Controllers\API\CountryController;
@@ -23,3 +24,5 @@ Route::middleware(['auth:sanctum'])->group(function () {
 Route::get('/countries', [CountryController::class, 'getCountries']);
 Route::get('/cities/{countryId}', [CityController::class, 'getCitiesByCountryId']);
 Route::get('/companies/{cityId}', [CompanyController::class, 'getCompaniesByCityId']);
+
+Route::get('/addresses/{cityId}', [AddressController::class, 'getAddressByCityId']);
