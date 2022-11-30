@@ -8,10 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class Country extends Model
 {
     use HasFactory;
-
-
-    public function cities(): \Illuminate\Database\Eloquent\Relations\HasMany
-    {
-        return $this->hasMany(City::class);
-    }
 }

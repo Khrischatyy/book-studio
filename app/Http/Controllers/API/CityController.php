@@ -3,21 +3,17 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\BaseController;
-use App\Models\City;
-use App\Models\Country;
-use App\Services\CityService;
-use App\Services\CompanyService;
-use Illuminate\Http\Request;
+use App\Repositories\CityRepository;
 
 class CityController extends BaseController
 {
-    public function __construct(protected CityService $cityService)
+    public function __construct(public CityRepository $cityRepository)
     {}
 
     public function getCitiesByCountryId($countryId): \Illuminate\Http\JsonResponse
     {
-        $country = $this->cityService->getCitiesByCountryId($countryId);
+        $cities = $this->cityRepository->getCitiesByCountryId($countryId)->get();
 
-        return $this->sendResponse($country, 'Cities received');
+        return $this->sendResponse($cities, 'Cities received');
     }
 }

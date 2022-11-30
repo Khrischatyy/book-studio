@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             CompanySeeder::class,
             UserSeeder::class,
             BookingSeeder::class,
-            PlaceSeeder::class,
+            AddressSeeder::class,
             CompanyCitySeeder::class,
             BadgeSeeder::class,
             CompanyBadgeSeeder::class

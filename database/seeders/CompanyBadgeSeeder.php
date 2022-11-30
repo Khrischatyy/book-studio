@@ -20,10 +20,7 @@ class CompanyBadgeSeeder extends Seeder
                 [
                     'id' => 1,
                     'company_id' => 1,
-                    'badges_id' => json_encode([
-                        1 => 2,
-                        2 => 3,
-                    ])
+                    'badge_id' => 1
                 ],
             );
 
@@ -31,37 +28,24 @@ class CompanyBadgeSeeder extends Seeder
             ->updateOrInsert(
                 [
                     'id' => 2,
-                    'company_id' => 2,
-                    'badges_id' => json_encode([
-                        1 => 1,
-                        2 => 3,
-                    ])
-                ],
-            );
+                    'company_id' => 1,
+                    'badge_id' => 2
+                ]);
 
         DB::table('company_badge')
             ->updateOrInsert(
                 [
                     'id' => 3,
-                    'company_id' => 3,
-                    'badges_id' => json_encode([
-                        1 => 1,
-                        2 => 3,
-                        3 => 2,
-                    ])
-                ],
-            );
+                    'company_id' => 2,
+                    'badge_id' => 3
+                ]);
 
         DB::table('company_badge')
             ->updateOrInsert(
                 [
                     'id' => 4,
                     'company_id' => 4,
-                    'badges_id' => json_encode([
-                        1 => 1,
-                        2 => 2,
-                        3 => 3,
-                    ])
+                    'badge_id' => 3,
                 ],
             );
     }

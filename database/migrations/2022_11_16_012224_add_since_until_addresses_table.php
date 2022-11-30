@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('places', function (Blueprint $table) {
+        Schema::table('addresses', function (Blueprint $table) {
             $table->unsignedBigInteger('city_id');
             $table->foreign('city_id')->references('id')->on('cities')
                 ->onDelete('cascade');
@@ -34,8 +34,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('places', function (Blueprint $table) {
-            $table->dropForeign('places_city_id_foreign');
+        Schema::table('addresses', function (Blueprint $table) {
+            $table->dropForeign('addresses_city_id_foreign');
             $table->dropColumn('city_id');
 
             $table->dropColumn('works_sinceTime');
