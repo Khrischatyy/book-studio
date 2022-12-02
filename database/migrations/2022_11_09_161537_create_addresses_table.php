@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
-            $table->float('latitude');
-            $table->float('longitude');
+            $table->float('latitude', 8, 6);
+            $table->float('longitude', 8,6);
             $table->string('street');
             $table->string('house_number');
             $table->integer('entrance');
