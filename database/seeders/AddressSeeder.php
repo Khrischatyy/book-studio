@@ -20,8 +20,8 @@ class AddressSeeder extends Seeder
                 [
                     'id' => 1,
                     'street' => 'Газетный переулок',
-                    'latitude' => 38.92,
-                    'longitude' => 20.45,
+                    'latitude' => 37.609337,
+                    'longitude' => 55.758972,
                     'house_number' => '1',
                     'entrance' => 1,
                     'city_id' => 1,
@@ -36,9 +36,9 @@ class AddressSeeder extends Seeder
                 [
                     'id' => 2,
                     'street' => 'Сербская улица',
-                    'latitude' => 44.78,
+                    'latitude' => 20.386438,
                     'company_id' => 1,
-                    'longitude' => 32.78,
+                    'longitude' => 44.8018983,
                     'house_number' => '13',
                     'entrance' => 13,
                     'city_id' => 1,
@@ -52,8 +52,8 @@ class AddressSeeder extends Seeder
                 [
                     'id' => 3,
                     'street' => 'Сербская улица',
-                    'latitude' => 42.83,
-                    'longitude' => 32.20,
+                    'latitude' => 20.386438,
+                    'longitude' => 44.8018983,
                     'house_number' => '13',
                     'company_id' => 2,
                     'entrance' => 13,
