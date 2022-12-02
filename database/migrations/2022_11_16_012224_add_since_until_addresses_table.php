@@ -18,12 +18,8 @@ return new class extends Migration
             $table->foreign('city_id')->references('id')->on('cities')
                 ->onDelete('cascade');
 
-//TODO choose needed format and delete this fucking piece of shit
-
-            $table->time('works_sinceTime');
-            $table->date('works_tillDate');
-            $table->timestamp('works_till1TimeStamp');
-            $table->dateTime('works_till2DateTime');
+            $table->time('works_till')->after('entrance');;
+            $table->time('works_since')->after('entrance');
         });
     }
 
@@ -38,10 +34,8 @@ return new class extends Migration
             $table->dropForeign('addresses_city_id_foreign');
             $table->dropColumn('city_id');
 
-            $table->dropColumn('works_sinceTime');
-            $table->dropColumn('works_tillDate');
-            $table->dropColumn('works_till1TimeStamp');
-            $table->dropColumn('works_till2DateTime');
+            $table->dropColumn('works_since');
+            $table->dropColumn('works_till');
         });
     }
 };

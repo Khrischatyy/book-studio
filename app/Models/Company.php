@@ -13,4 +13,14 @@ class Company extends Model
     {
         return $this->belongsToMany(Badge::class, 'company_badge');
     }
+
+    public function cities()
+    {
+        return $this->belongsToMany(City::class,'company_city');
+    }
+
+    public function addresses()
+    {
+        return $this->hasMany(Address::class);
+    }
 }

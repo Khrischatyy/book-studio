@@ -19,8 +19,8 @@ class DatabaseSeeder extends Seeder
             CitySeeder::class,
             CompanySeeder::class,
             UserSeeder::class,
-            BookingSeeder::class,
             AddressSeeder::class,
+            BookingSeeder::class,
             CompanyCitySeeder::class,
             BadgeSeeder::class,
             CompanyBadgeSeeder::class

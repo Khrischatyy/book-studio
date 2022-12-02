@@ -20,6 +20,7 @@ class CompanySeeder extends Seeder
                 [
                     'id' => 1,
                     'name' => 'Section',
+                    'slug' => 'section',
                     'founding_date' => 2020,
                     'rating' => 9.7,
                 ],
@@ -30,6 +31,7 @@ class CompanySeeder extends Seeder
                 [
                     'id' => 2,
                     'name' => 'Studio near',
+                    'slug' => 'section-near',
                     'founding_date' => 2020,
                     'rating' => 9.7,
                 ],
@@ -40,6 +42,7 @@ class CompanySeeder extends Seeder
                 [
                     'id' => 3,
                     'name' => 'Shit company',
+                    'slug' => 'shit-company',
                     'founding_date' => 2020,
                     'rating' => 5.7,
                 ],
@@ -51,6 +54,7 @@ class CompanySeeder extends Seeder
                 [
                     'id' => 4,
                     'name' => 'Good company',
+                    'slug' => 'good.company',
                     'founding_date' => 2020,
                     'rating' => 8.7,
                 ],

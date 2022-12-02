@@ -26,10 +26,8 @@ class AddressSeeder extends Seeder
                     'entrance' => 1,
                     'city_id' => 1,
                     'company_id' => 1,
-                    'works_sinceTime' => '13:30:00',
-                    'works_tillDate' => '1998-08-02',
-                    'works_till1TimeStamp' => '2022-09-12 18:00:00',
-                    'works_till2DateTime' => '2022-09-12 18:00:00',
+                    'works_since' => '10:00:00',
+                    'works_till' => '18:00:00',
                 ],
             );
 
@@ -44,10 +42,8 @@ class AddressSeeder extends Seeder
                     'house_number' => '13',
                     'entrance' => 13,
                     'city_id' => 1,
-                    'works_sinceTime' => '13:30:00',
-                    'works_tillDate' => '1998-08-02',
-                    'works_till1TimeStamp' => '2022-09-12 18:00:00',
-                    'works_till2DateTime' => '2022-09-12 18:00:00',
+                    'works_since' => '9:00:00',
+                    'works_till' => '22:00:00',
                 ],
             );
 
@@ -62,10 +58,8 @@ class AddressSeeder extends Seeder
                     'company_id' => 2,
                     'entrance' => 13,
                     'city_id' => 3,
-                    'works_sinceTime' => '13:30:00',
-                    'works_tillDate' => '1998-08-02',
-                    'works_till1TimeStamp' => '2022-09-12 18:00:00',
-                    'works_till2DateTime' => '2022-09-12 18:00:00',
+                    'works_since' => '8:00:00',
+                    'works_till' => '22:00:00',
                 ],
             );
     }

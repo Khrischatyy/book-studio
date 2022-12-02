@@ -22,7 +22,7 @@ class BookingSeeder extends Seeder
                     'id' => 1,
                     'from' => Carbon::createFromTime(12),
                     'to' => Carbon::createFromTime(15),
-                    'company_id' => 1,
+                    'address_id' => 1,
                     'user_id' => 1,
                 ],
             );
@@ -33,7 +33,7 @@ class BookingSeeder extends Seeder
                     'id' => 2,
                     'from' => Carbon::createFromTime(15),
                     'to' => Carbon::createFromTime(17),
-                    'company_id' => 1,
+                    'address_id' => 1,
                     'user_id' => 2,
                 ],
             );
