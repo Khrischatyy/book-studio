@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             BookingSeeder::class,
             CompanyCitySeeder::class,
             BadgeSeeder::class,
-            CompanyBadgeSeeder::class
+            AddressBadgeSeeder::class
         ]);
 
         // \App\Models\User::factory(10)->create();

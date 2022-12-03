@@ -13,16 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('company_badge', function (Blueprint $table) {
+        Schema::create('address_equipment', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('company_id');
-            $table->unsignedBigInteger('badge_id');
+            $table->unsignedBigInteger('address_id');
+            $table->unsignedBigInteger('equipment_id');
 
-            $table->foreign('company_id')->references('id')->on('companies')
+            $table->foreign('address_id')->references('id')->on('addresses')
                 ->onDelete('cascade');
 
-            $table->foreign('badge_id')->references('id')->on('badges')
+            $table->foreign('equipment_id')->references('id')->on('equipments')
                 ->onDelete('cascade');
+
+            $table->timestamps();
         });
     }
 
@@ -33,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('company_badge');
+        Schema::dropIfExists('address_equipment');
     }
 };

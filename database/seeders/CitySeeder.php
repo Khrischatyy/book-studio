@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\City;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class CitySeeder extends Seeder
 {
@@ -15,32 +14,23 @@ class CitySeeder extends Seeder
      */
     public function run()
     {
-        DB::table('cities')
-            ->updateOrInsert(
-                [
-                    'id' => 1,
-                    'name' => 'Belgrade',
-                    'country_id' => 1,
-                ],
-            );
-
-        DB::table('cities')
-            ->updateOrInsert(
-                [
-                    'id' => 2,
-                    'name' => 'Moscow',
-                    'country_id' => 2,
-                ],
-            );
-
-
-        DB::table('cities')
-            ->updateOrInsert(
-                [
-                    'id' => 3,
-                    'name' => 'Novi Sad',
-                    'country_id' => 1,
-                ],
-            );
+        City::upsert([
+            [
+                'id' => 1,
+                'name' => 'belgrade',
+                'country_id' => 1,
+            ],
+            [
+                'id' => 2,
+                'name' => 'Moscow',
+                'country_id' => 2,
+            ],
+            [
+                'id' => 3,
+                'name' => 'Novi Sad',
+                'country_id' => 1,
+            ],
+            ], ['id', 'name'], ['country_id']
+        );
     }
 }

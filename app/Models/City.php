@@ -9,6 +9,8 @@ class City extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     public function companies(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
         return $this->belongsToMany(Company::class, 'company_city');

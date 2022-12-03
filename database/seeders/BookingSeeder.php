@@ -31,7 +31,7 @@ class BookingSeeder extends Seeder
             ->updateOrInsert(
                 [
                     'id' => 2,
-                    'from' => Carbon::createFromTime(15),
+                    'from' => Carbon::createFromTime(16),
                     'to' => Carbon::createFromTime(17),
                     'address_id' => 1,
                     'user_id' => 2,
