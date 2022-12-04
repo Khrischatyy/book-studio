@@ -13,17 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('equipments', function (Blueprint $table) {
+        Schema::create('equipment_type', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->text('description');
-            $table->string('shop_path');
-
-            $table->unsignedBigInteger('type_id');
-            $table->foreign('type_id')->references('id')->on('equipment_type')
-                ->onDelete('cascade');
-
-            $table->timestamps();
+            $table->string('icon');
         });
     }
 
@@ -34,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('equipments');
+        Schema::dropIfExists('equipment_type');
     }
 };

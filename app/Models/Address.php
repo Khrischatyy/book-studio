@@ -18,4 +18,9 @@ class Address extends Model
     {
         return $this->hasMany(Booking::class);
     }
+
+    public function equipment()
+    {
+        return $this->belongsToMany(Equipment::class);
+    }
 }
