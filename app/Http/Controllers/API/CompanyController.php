@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\BaseController;
-use App\Models\Company;
 use App\Repositories\CompanyRepository;
 use App\Services\CompanyService;
 

@@ -23,4 +23,9 @@ class Address extends Model
     {
         return $this->belongsToMany(Equipment::class);
     }
+
+    public function badges()
+    {
+        return $this->belongsToMany(Badge::class);
+    }
 }

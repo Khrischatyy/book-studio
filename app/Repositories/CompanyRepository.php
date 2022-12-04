@@ -10,6 +10,6 @@ class CompanyRepository implements CompanyRepositoryInterface
 {
     public function getCompaniesByCityId(int $cityId)
     {
-        return City::whereId($cityId)->with('companies.badges')->first();
+        return City::whereId($cityId)->with('companies.addresses.badges')->first();
     }
 }
