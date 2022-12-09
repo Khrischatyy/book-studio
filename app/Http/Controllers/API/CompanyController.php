@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\BaseController;
+use App\Models\Company;
 use App\Repositories\CompanyRepository;
 use App\Services\CompanyService;
 
@@ -26,5 +27,12 @@ class CompanyController extends BaseController
         $company = $this->companyService->getCompany($slug);
 
         return $this->sendResponse($company, 'Company received');
+    }
+
+    public function getCompanyAddressesInCity(int $cityId, int $companyId)
+    {
+        return Company::where('id', $companyId)->with(['addresses' => function($q){
+            $q->where('city_id', 1);
+        }])->get();
     }
 }

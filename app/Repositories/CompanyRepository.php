@@ -12,4 +12,9 @@ class CompanyRepository implements CompanyRepositoryInterface
     {
         return City::whereId($cityId)->with('companies.addresses.badges')->first();
     }
+
+    public function getCompanyBySlug(string $slug)
+    {
+        return Company::where('slug', $slug)->with(['badges', 'cities', 'addresses'])->first();
+    }
 }
