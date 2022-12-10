@@ -24,17 +24,17 @@ class AddressSeeder extends Seeder
                 'longitude' => 55.758972,
                 'house_number' => '1',
                 'entrance' => 1,
-                'city_id' => 1,
+                'city_id' => 2,
                 'company_id' => 1,
                 'works_since' => '10:00:00',
                 'works_till' => '18:00:00',
             ],
             [
                 'id' => 2,
-                'street' => 'Сербская улица',
-                'latitude' => 20.386438,
+                'street' => 'Mirijevski Venac 4',
+                'latitude' => 20.5320636,
                 'company_id' => 1,
-                'longitude' => 44.8018983,
+                'longitude' => 44.792424,
                 'house_number' => '13',
                 'entrance' => 13,
                 'city_id' => 1,
@@ -43,7 +43,7 @@ class AddressSeeder extends Seeder
             ],
             [
                 'id' => 3,
-                'street' => 'Сербская улица',
+                'street' => 'Nikolic',
                 'latitude' => 20.386438,
                 'longitude' => 44.8018983,
                 'house_number' => '13',
@@ -55,7 +55,7 @@ class AddressSeeder extends Seeder
             ],
         ],
             ['id', 'street'],
-            ['latitude', 'longitude', 'house_number', 'company_id',
+            ['street', 'latitude', 'longitude', 'house_number', 'company_id',
             'entrance', 'city_id', 'works_since', 'works_till']);
 
     }
