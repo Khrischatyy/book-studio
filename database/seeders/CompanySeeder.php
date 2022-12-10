@@ -20,6 +20,7 @@ class CompanySeeder extends Seeder
                 [
                     'id' => 1,
                     'name' => 'Section',
+                    'logo' => '/images/logos/section.svg',
                     'slug' => 'section',
                     'founding_date' => 2020,
                     'rating' => 9.7,
@@ -30,7 +31,8 @@ class CompanySeeder extends Seeder
             ->updateOrInsert(
                 [
                     'id' => 2,
-                    'name' => 'Studio near',
+                    'name' => 'Abbey Road Studios',
+                    'logo' => '/images/logos/abbey.png',
                     'slug' => 'section-near',
                     'founding_date' => 2020,
                     'rating' => 9.7,
@@ -41,8 +43,9 @@ class CompanySeeder extends Seeder
             ->updateOrInsert(
                 [
                     'id' => 3,
-                    'name' => 'Shit company',
+                    'name' => 'TVT',
                     'slug' => 'shit-company',
+                    'logo' => '/images/logos/abbey.png',
                     'founding_date' => 2020,
                     'rating' => 5.7,
                 ],
@@ -53,8 +56,9 @@ class CompanySeeder extends Seeder
             ->updateOrInsert(
                 [
                     'id' => 4,
-                    'name' => 'Good company',
+                    'name' => 'Release',
                     'slug' => 'good.company',
+                    'logo' => '/images/logos/abbey.png',
                     'founding_date' => 2020,
                     'rating' => 8.7,
                 ],
