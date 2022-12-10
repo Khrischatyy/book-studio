@@ -9,17 +9,12 @@ class Company extends Model
 {
     use HasFactory;
 
-    public function badges(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
-    {
-        return $this->belongsToMany(Badge::class, 'company_badge');
-    }
-
-    public function cities()
+    public function cities(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
         return $this->belongsToMany(City::class,'company_city');
     }
 
-    public function addresses()
+    public function addresses(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(Address::class);
     }

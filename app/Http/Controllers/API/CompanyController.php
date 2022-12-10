@@ -32,7 +32,7 @@ class CompanyController extends BaseController
     public function getCompanyAddressesInCity(int $cityId, int $companyId)
     {
         return Company::where('id', $companyId)->with(['addresses' => function($q){
-            $q->where('city_id', 1);
+            $q->where('city_id', 1)->with('badges');
         }])->get();
     }
 }
