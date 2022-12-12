@@ -12,4 +12,9 @@ class AddressRepository implements AddressRepositoryInterface
     {
         return Address::where('city_id', $cityId)->with('company');
     }
+
+    public function getAddressByCompanyId(int $companyId)
+    {
+        return Address::where('company_id', $companyId)->with(['company', 'bookings'])->first();
+    }
 }

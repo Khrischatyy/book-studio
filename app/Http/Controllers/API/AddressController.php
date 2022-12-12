@@ -16,4 +16,11 @@ class AddressController extends BaseController
 
         return $this->sendResponse($addresses, 'Cities received');
     }
+
+    public function getAddressByCompanyId(int $companyId)
+    {
+        $address = $this->addressRepository->getAddressByCompanyId($companyId);
+
+        return $this->sendResponse($address, 'Address received');
+    }
 }
