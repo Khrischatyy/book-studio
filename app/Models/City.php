@@ -9,6 +9,8 @@ class City extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['id', 'name', 'country_id'];
+
     public $timestamps = false;
 
     public function companies(): \Illuminate\Database\Eloquent\Relations\BelongsToMany

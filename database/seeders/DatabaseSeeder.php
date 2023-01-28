@@ -17,17 +17,17 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             CountrySeeder::class,
-            CitySeeder::class,
-            CompanySeeder::class,
-            UserSeeder::class,
-            AddressSeeder::class,
-            BookingSeeder::class,
-            CompanyCitySeeder::class,
-            BadgeSeeder::class,
-            AddressBadgeSeeder::class,
-            EquipmentTypeSeeder::class,
-            EquipmentSeeder::class,
-            AddressEquipmentSeeder::class,
+//            CitySeeder::class,
+//            CompanySeeder::class,
+//            UserSeeder::class,
+//            AddressSeeder::class,
+//            BookingSeeder::class,
+//            CompanyCitySeeder::class,
+//            BadgeSeeder::class,
+//            AddressBadgeSeeder::class,
+//            EquipmentTypeSeeder::class,
+//            EquipmentSeeder::class,
+//            AddressEquipmentSeeder::class,
         ]);
 
         // \App\Models\User::factory(10)->create();

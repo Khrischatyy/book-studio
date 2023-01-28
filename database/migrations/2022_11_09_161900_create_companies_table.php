@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('logo')->nullable();
             $table->string('slug');
-            $table->integer('founding_date');
+            $table->date('founding_date');
             $table->float('rating');
             $table->timestamps();
         });
