@@ -14,8 +14,8 @@ services:
     build:
       context: ./docker/php/
       args:
-        WWWUSER: 'anthony'
-        WWWUID: '1001'
+        WWWUSER: 'laravel'
+        WWWUID: '1000'
     volumes:
       - '.:/app/'
     extra_hosts:
