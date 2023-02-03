@@ -36,12 +36,6 @@ install: build composer-install laravel-storage
 
 install-dev: build-dev composer-install-dev laravel-storage
 
-laravel-install:
-	docker-compose run --rm php composer create-project laravel/laravel laravel --prefer-dist
-	mv README.md README-docker.md
-	-mv -f ./laravel/* ./laravel/.* ./
-	-rm -rf ./laravel
-
 laravel-cache:
 	docker-compose exec php php artisan cache:clear
 	docker-compose exec php php artisan config:cache
