@@ -1,6 +1,7 @@
 services:
   nginx:
     image: nginx:1.20
+    container_name: nginx
     restart: always
     ports:
       - '80:80'
@@ -14,17 +15,18 @@ services:
       - php
     networks:
       - laravel
-#  certbot:
-#    image: certbot/certbot
-#    restart: unless-stopped
-#    volumes:
-#      - ./data/certbot/conf:/etc/letsencrypt
-#      - ./data/certbot/www:/var/www/certbot
-#    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
-#    networks:
-#      - laravel
-#    depends_on:
-#      - nginx
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    restart: unless-stopped
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    networks:
+      - laravel
+    depends_on:
+      - nginx
   php:
     build:
       context: ./docker/php/
@@ -41,11 +43,13 @@ services:
       - pgsql
   node:
     image: node:16
+    container_name: node
     volumes:
         - './:/app/'
     working_dir: '/app/'
   pgsql:
     image: postgres:14
+    container_name: pgsql
     restart: always
     ports:
       - '${FORWARD_DB_PORT:-5432}:5432'
