@@ -1,8 +1,8 @@
 build:
-	docker-compose -f docker-compose-production.yml build
+	docker-compose build
 
 build-dev:
-	docker-compose build
+	docker-compose -f docker-compose-dev.yml build
 
 composer-install:
 	docker-compose exec php composer install --optimize-autoloader --no-suggest --no-dev
@@ -47,26 +47,26 @@ laravel-storage:
 	docker-compose run --rm php php artisan storage:link
 
 pull:
-	docker-compose -f docker-compose-production.yml pull
+	docker-compose pull
 
 pull-dev:
-	docker-compose pull
+	docker-compose -f docker-compose-dev.yml pull
 
 restart: stop start
 
 restart-dev: stop-dev start-dev
 
 start:
-	docker-compose -f docker-compose-production.yml up -d
-
-start-dev:
 	docker-compose up -d
 
+start-dev:
+	docker-compose -f docker-compose-dev.yml up -d
+
 stop:
-	docker-compose -f docker-compose-production.yml down --remove-orphans
+	docker-compose down --remove-orphans
 
 stop-dev:
-	docker-compose down --remove-orphans
+	docker-compose -f docker-compose-dev.yml down --remove-orphans
 
 tinker:
 	docker-compose exec php php artisan tinker
