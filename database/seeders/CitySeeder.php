@@ -30,7 +30,7 @@ class CitySeeder extends Seeder
                 'name' => 'Novi Sad',
                 'country_id' => 1,
             ],
-            ], ['id', 'name'], ['country_id']
+            ], ['id']
         );
     }
 }

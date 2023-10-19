@@ -38,8 +38,7 @@ class EquipmentSeeder extends Seeder
                 'type_id' => 4,
             ],
             ],
-            ['id', 'name', 'description'],
-            ['shop_path']
+            ['id'],
         );
     }
 }

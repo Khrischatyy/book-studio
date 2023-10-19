@@ -22,7 +22,7 @@ class CompanySeeder extends Seeder
                     'name' => 'Section',
                     'logo' => '/images/logos/section.svg',
                     'slug' => 'section',
-                    'founding_date' => 2020,
+                    'founding_date' => '2020-12-10 13:25:26',
                     'rating' => 9.7,
                 ],
             );
@@ -34,7 +34,7 @@ class CompanySeeder extends Seeder
                     'name' => 'Abbey Road Studios',
                     'logo' => '/images/logos/abbey.png',
                     'slug' => 'section-near',
-                    'founding_date' => 2020,
+                    'founding_date' => '2021-12-10 13:25:26',
                     'rating' => 9.7,
                 ],
             );
@@ -46,7 +46,7 @@ class CompanySeeder extends Seeder
                     'name' => 'TVT',
                     'slug' => 'shit-company',
                     'logo' => '/images/logos/abbey.png',
-                    'founding_date' => 2020,
+                    'founding_date' => '2022-12-10 13:25:26',
                     'rating' => 5.7,
                 ],
             );
@@ -59,7 +59,7 @@ class CompanySeeder extends Seeder
                     'name' => 'Release',
                     'slug' => 'good.company',
                     'logo' => '/images/logos/abbey.png',
-                    'founding_date' => 2020,
+                    'founding_date' => '2023-12-10 13:25:26',
                     'rating' => 8.7,
                 ],
             );

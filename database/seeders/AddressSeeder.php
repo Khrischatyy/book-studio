@@ -54,9 +54,7 @@ class AddressSeeder extends Seeder
                 'works_till' => '22:00:00',
             ],
         ],
-            ['id', 'street'],
-            ['street', 'latitude', 'longitude', 'house_number', 'company_id',
-            'entrance', 'city_id', 'works_since', 'works_till']);
+            ['id']);
 
     }
 }
