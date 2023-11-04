@@ -13,6 +13,7 @@ services:
       - laravel
   php:
     build:
+      container_name: php
       context: ./docker/php/
       args:
         WWWUSER: 'laravel'
